@@ -75,5 +75,18 @@ console.log('8. Total supplies available is:',totalNumOfSupplies);
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
+let numBoxes = 0;
+let part = 1;
+const TOTAL_NUM_PARTS = 572;
+while(part <= TOTAL_NUM_PARTS){
+    if(part % 7 === 0){
+        numBoxes++;
+        part++;
+    } else{
+        part++;
+    }
+}
 
-// while()
+let remainingPart = TOTAL_NUM_PARTS - (numBoxes * 7);
+
+console.log(`The number of boxes filled is ${numBoxes} and number of parts remaining was ${remainingPart}`);
